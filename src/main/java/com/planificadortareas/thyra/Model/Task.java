@@ -1,7 +1,12 @@
 package com.planificadortareas.thyra.Model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
@@ -19,9 +24,9 @@ public class Task {
     private String priority;
     @NotBlank(message = "La descripción de la tarea es obligatoria")
     private String description;
-    @NotBlank(message = "La fecha de inicio de la tarea es obligatoria")
+    @NotNull(message = "La fecha de inicio de la tarea es obligatoria")
     private LocalDate startDate;
-    @NotBlank(message = "La fecha de vencimiento de la tarea es obligatoria")
+    @NotNull(message = "La fecha de vencimiento de la tarea es obligatoria")
     private LocalDate dueDate;
     @NotBlank(message = "El estado de la tarea es obligatorio")
     private String status;
