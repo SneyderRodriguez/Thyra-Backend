@@ -1,4 +1,4 @@
-package com.planificadortareas.thyra.entity;
+package com.planificadortareas.thyra.Model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
